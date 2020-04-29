@@ -1,6 +1,6 @@
 # Format Code Action
 
-Run eslint extension after then prettier extension in VS Code. Or the other way around, whatever way you want.
+Run eslint extension after the prettier extension in VS Code. Or the other way around, whatever way you want.
 
 > Requires VS Code 1.44+
 
@@ -16,6 +16,8 @@ Disbale `formatOnSave` and use the `source.fixAll.format` codeAction in whatever
     "source.fixAll.eslint"
   ]
 ```
+
+This runs 'Format Document' with the default formatter (in this case prettier).
 
 Or for specific lanuage only:
 
@@ -54,7 +56,10 @@ The extension uses the [`CodeActionProvider`](https://code.visualstudio.com/api/
 
 - [`languages.registerCodeActionsProvider`](https://code.visualstudio.com/api/references/vscode-api#languages.registerCodeActionsProvider)
 
-
 ## Credits
 
 Based on [Microsoft's code-actions-sample](https://github.com/microsoft/vscode-extension-samples/tree/master/code-actions-sample)
+
+### Icon
+
+[formatting by Danil Polshin from the Noun Project](https://thenounproject.com/search/?q=format&i=627383).
