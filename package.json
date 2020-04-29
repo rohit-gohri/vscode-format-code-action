@@ -1,0 +1,37 @@
+{
+	"name": "format-code-action",
+	"private": true,
+	"displayName": "Format Code Action",
+	"version": "0.0.1",
+	"publisher": "rohit-gohri",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/rohit-gohri/vscode-format-code-action"
+	},
+	"bugs": {
+		"url": "https://github.com/rohit-gohri/vscode-format-code-action/issues"
+	},
+	"engines": {
+		"vscode": "^1.44.0"
+	},
+	"categories": [
+		"Other",
+		"Formatters"
+	],
+	"activationEvents": [
+		"*"
+	],
+	"main": "./out/extension.js",
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"lint": "tslint -p ./",
+		"watch": "tsc -watch -p ./"
+	},
+	"devDependencies": {
+		"@types/node": "^12.12.0",
+		"tslint": "^5.19.0",
+		"typescript": "^3.8.3",
+		"@types/vscode": "^1.32.0"
+	}
+}
