@@ -18,7 +18,7 @@ Can also be installed in VS Code: Launch VS Code Quick Open (Ctrl+P), paste the 
 
 ## Usage
 
-Disbale `formatOnSave` and use the `source.fixAll.format` codeAction in whatever order you want with VS Code settings:
+Disable `formatOnSave` and use the `source.fixAll.format` codeAction in whatever order you want with VS Code settings:
 
 ```json
   "editor.formatOnSave": false,
