@@ -8,13 +8,15 @@ Run eslint extension after the prettier extension in VS Code. Or the other way a
 
 > Requires VS Code 1.44+
 
-Install through VS Code extensions:
+Install through VS Code extensions: [Visual Studio Code Market Place: Format Code Action](https://marketplace.visualstudio.com/items?itemName=rohit-gohri.format-code-action)
 
-[Visual Studio Code Market Place: Format Code Action](https://marketplace.visualstudio.com/items?itemName=rohit-gohri.format-code-action)
-
-Can also be installed in VS Code: Launch VS Code Quick Open (Ctrl+P), paste the following command, and press enter.
+Or install from within VS Code: Launch VS Code Quick Open (<kbd>Ctrl</kbd>+<kbd>P</kbd> or <kbd>cmd</kbd>+<kbd>P</kbd>), paste the following command, and press enter.
 
     ext install rohit-gohri.format-code-action
+
+Or on the command line:
+
+    code --install-extension rohit-gohri.format-code-action
 
 ## Usage
 
