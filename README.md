@@ -20,16 +20,18 @@ Or on the command line:
 
 ## Usage
 
-Disable `formatOnSave` and use the `source.fixAll.format` codeAction in whatever order you want with VS Code settings:
+Disable `formatOnSave` and use the `source.formatDocument` codeAction in whatever order you want with VS Code settings:
 
 ```json
   "editor.formatOnSave": false,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.codeActionsOnSave": [
-    "source.fixAll.format",
+    "source.formatDocument",
     "source.fixAll.eslint"
   ]
 ```
+
+> NOTE: This was first released with `source.fixAll.format` as the codeAction, that still works for legacy purposes.
 
 This runs 'Format Document' with the default formatter (in this case prettier).
 
@@ -40,11 +42,24 @@ Or for specific lanuage only:
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "[javascript]": {
     "editor.formatOnSave": false,
-    "editor.codeActionsOnSave": ["source.fixAll.format", "source.fixAll.eslint"]
+    "editor.codeActionsOnSave": ["source.formatDocument", "source.fixAll.eslint"]
   },
 ```
 
 This would run prettier by default, but for javascript files would run prettier and then eslint. If you want to reverse the order then just reverse the array.
+
+### Format Modified
+
+Alternatively you may want to format only the modified part of the file, in that case use `source.formatModified`:
+
+```json
+  "editor.formatOnSave": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": [
+    "source.formatModified",
+    "source.fixAll.eslint"
+  ]
+```
 
 ## Motivation
 
