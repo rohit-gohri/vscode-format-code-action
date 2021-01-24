@@ -64,7 +64,7 @@ Since the [March 2020 (v1.44)](https://code.visualstudio.com/updates/v1_44#_expl
 
 The extension uses the [`CodeActionProvider`](https://code.visualstudio.com/api/references/vscode-api#CodeActionProvider) api to implement a simple code action that runs 'Format Document' on the current file. This allows us to disable `formatOnSave` and use it as a codeAction instead in a specific order with other extensions.
 
-Read More on my blog: [How to get ESlint and Prettier to play nicely in VS Code?](https://rohit.page/blog/posts/how-to-get-prettier-eslint-play-nicely-with-vscode/)
+Read More on my blog: [How to get ESlint and Prettier to play nicely in VS Code?](https://rohit.page/blog/posts/how-to-get-prettier-eslint-play-nicely-with-vscode/?utm_source=github&utm_medium=repo&utm_campaign=hf)
 
 ## VS Code API
 
