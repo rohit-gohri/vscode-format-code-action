@@ -1,0 +1,46 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: Use Node.js 12.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+
+      - name: install
+        run: |
+          npm ci
+          npm i -g vsce
+        env:
+          CI: 1
+
+      - name: Build & Package
+        run: |
+          npm run compile
+          vsce package
+
+      - name: Publish
+        run: |
+          vsce publish -p $VSCE_TOKEN
+          cp format-code-action-*.vsix format-code-action.vsix
+        env:
+          VSCE_TOKEN: ${{ secrets.VSCE_TOKEN }}
+
+      - name: Create Release
+        id: create_release
+        uses: softprops/action-gh-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          files: format-code-action.vsix
+          draft: false
+          prerelease: false
