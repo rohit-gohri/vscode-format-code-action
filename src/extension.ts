@@ -1,5 +1,5 @@
 /*---------------------------------------------------------
- * Copyright (C) Rohit Gohri. All rights reserved.
+ * Copyright (C) Rohit Gohri (https://rohit.page). All rights reserved.
  *--------------------------------------------------------*/
 
 import * as vscode from "vscode";
@@ -29,6 +29,8 @@ export function activate(context: vscode.ExtensionContext) {
   );
 }
 
+let cache: vscode.CodeAction[] | undefined;
+
 /**
  * Provides code actions for calling format document and format modified
  */
@@ -43,23 +45,23 @@ export class FormatActions implements vscode.CodeActionProvider {
     document: vscode.TextDocument,
     range: vscode.Range
   ): vscode.CodeAction[] | undefined {
+    if (cache) return cache;
     const formatDocumentActionLegacy = this.getFormatDocumentAction(
       DOCUMENT_CODE_ACTION_KIND_LEGACY
     );
-    const formatDocumentAction = this.getFormatDocumentAction(
-      DOCUMENT_CODE_ACTION_KIND
-    );
+    const formatDocumentAction = this.getFormatDocumentAction();
     const formatModifiedAction = this.getFormatModifiedAction();
 
-    return [
+    cache = [
       formatDocumentActionLegacy,
       formatDocumentAction,
       formatModifiedAction,
     ];
+    return cache;
   }
 
   private getFormatDocumentAction(
-    actionKind: vscode.CodeActionKind
+    actionKind: vscode.CodeActionKind = DOCUMENT_CODE_ACTION_KIND
   ): vscode.CodeAction {
     const action = new vscode.CodeAction("Format Document", actionKind);
     action.command = {
