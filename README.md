@@ -48,7 +48,7 @@ Or for specific lanuage only:
 
 This would run prettier by default, but for javascript files would run prettier and then eslint. If you want to reverse the order then just reverse the array.
 
-### Format Modified
+### Format Modified (EXPERIMENTAL)
 
 Alternatively you may want to format only the modified part of the file, in that case use `source.formatModified`:
 
@@ -60,6 +60,8 @@ Alternatively you may want to format only the modified part of the file, in that
     "source.fixAll.eslint"
   ]
 ```
+
+This is experimentally supported right now, if you face any problems please report them at: <https://github.com/rohit-gohri/vscode-format-code-action/issues/5>
 
 ## Motivation
 
