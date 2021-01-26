@@ -2,7 +2,7 @@
 	"name": "format-code-action",
 	"private": true,
 	"displayName": "Format Code Action",
-	"version": "0.0.1",
+	"version": "0.1.0",
 	"publisher": "rohit-gohri",
 	"repository": {
 		"type": "git",
