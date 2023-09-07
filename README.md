@@ -1,6 +1,6 @@
 # Format Code Action
 
-[![Version](https://vsmarketplacebadge.apphb.com/version-short/rohit-gohri.format-code-action.svg)](https://marketplace.visualstudio.com/items?itemName=rohit-gohri.format-code-action) &nbsp; [![Installs](https://vsmarketplacebadge.apphb.com/installs/rohit-gohri.format-code-action.svg)](https://marketplace.visualstudio.com/items?itemName=rohit-gohri.format-code-action) &nbsp; [![Ratings](https://vsmarketplacebadge.apphb.com/rating-star/rohit-gohri.format-code-action.svg)](https://marketplace.visualstudio.com/items?itemName=rohit-gohri.format-code-action)
+[![Version](https://vsmarketplacebadges.dev/version-short/rohit-gohri.format-code-action.svg)](https://marketplace.visualstudio.com/items?itemName=rohit-gohri.format-code-action) &nbsp; [![Installs](https://vsmarketplacebadges.dev/installs/rohit-gohri.format-code-action.svg)](https://marketplace.visualstudio.com/items?itemName=rohit-gohri.format-code-action) &nbsp; [![Ratings](https://vsmarketplacebadges.dev/rating-star/rohit-gohri.format-code-action.svg)](https://marketplace.visualstudio.com/items?itemName=rohit-gohri.format-code-action)
 
 Run eslint extension after the prettier extension in VS Code. Or the other way around, whatever way you want.
 
